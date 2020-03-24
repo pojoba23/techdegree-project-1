@@ -13,28 +13,28 @@ project 1 - A Random Quote Generator
 const quote = [
   {
     //quote 1
-    tvShow: `"Sometimes I'll start a sentence and I don't even know where it's going. I just hope I find it along the way"` ,
+    quote: `"Sometimes I'll start a sentence and I don't even know where it's going. I just hope I find it along the way"` ,
     source: `"- Michael Scott, Season 5, "The Duel"`
   },
   {
     //quote 2 
-    movie: `"I find your lack of faith disturbing"`,
+    quote: `"I find your lack of faith disturbing"`,
     source: "- Darth Vader, Star Wars A New Hope"
   },
   {
     //quote 3
-    book: `"It's a dangerous business, Frodo, going out your door. You step onto the road, and if you don't keep your feet, there's no knowing where you might be swept off to."`,
+    quote: `"It's a dangerous business, Frodo, going out your door. You step onto the road, and if you don't keep your feet, there's no knowing where you might be swept off to."`,
     source:  "- Bilbo, The Lord of the Rings Fellowship of the Ring"
   },
   {
     //quote 4
-    speech:  `"Yesterday, December 7th, 1941 -- a date which will live in infamy."`,
+    quote:  `"Yesterday, December 7th, 1941 -- a date which will live in infamy."`,
     source:  "President Franklin Roosevelt",
     year: "December 8, 1941"
   },
   {
     //quote 5
-    videoGame:  `"Wake me...when you need me"`,
+    quote:  `"Wake me...when you need me"`,
     source: "Master Chief, Halo 3"
    }
   ];
@@ -45,21 +45,24 @@ const quote = [
   ***/
   
   function getRandomQuote (array) {
-  var quoteIndex = math.floor(math.random() * (quote.length));
-  for (var i = 0; i < array.length; i ++) {
+  var quoteIndex = Math.floor(Math.random() * (quote.length));
       var randomQuote = array[quoteIndex]
-  }
   return randomQuote;
   }
-  console.log(getRandomQuote);
+
   
   /***
    * `printQuote` function
   ***/
- 
-  function printQuote (array){
-    return getRandomQuote () 
-  }
+
+  function printQuote (){
+ var result = getRandomQuote();
+    var message = "<p class = 'quote'>" + quote.quote + "</p>" + "<p class ='source'>" + quote.source + "</p>" + "<p class = 'year'>" + quote.year + "</p>";
+    if ( quote.quote === true){
+      print (quote.quote);
+
+ document.getElementById('quote-box').innerHTML = message;
+}
 
 
 
