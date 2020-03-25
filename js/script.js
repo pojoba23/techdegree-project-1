@@ -39,11 +39,6 @@ const quote = [
    }
   ];
   
-  
-  /***
-   * `getRandomQuote` function
-  ***/
-  
   function getRandomQuote (array) {
   var quoteIndex = Math.floor(Math.random() * (quote.length));
       var randomQuote = array[quoteIndex]
@@ -57,15 +52,14 @@ const quote = [
 
   function printQuote (){
  var result = getRandomQuote(quote);
- if (quote.year === ""){   
-  var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source + "</p>"+"<p class = 'year'>" + result.year + "</p>";
+ if (result.year){   
+  var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source 
+  + "</p>"+"<p class = 'year'>" + result.year + "</p>";
  }else{   
     var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source + "</p>";
  }
   document.getElementById('quote-box').innerHTML = message;
     }
-
-
 
 /***
  * click event listener for the print quote button
