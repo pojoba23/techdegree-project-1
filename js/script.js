@@ -58,19 +58,16 @@ const quote = [
  }else{   
     var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source + "</p>";
  }
-result.forEach (function(results){
-  Math.floor(Math.random()*16777215).toString(16);
 
-})
   document.getElementById('quote-box').innerHTML = message;
-}
+    }
 
 //  function changeQuote (){
 //   printQuote.setInterval(1000) 
 //   };
 
-var quoteTimer = setInterval(printQuote, 1000);
-  
+var quoteTimer = setInterval(printQuote, 10000);
+
 
 /***
  * click event listener for the print quote button
