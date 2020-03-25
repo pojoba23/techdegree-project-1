@@ -14,17 +14,17 @@ const quote = [
   {
     //quote 1
     quote: `"Sometimes I'll start a sentence and I don't even know where it's going. I just hope I find it along the way"` ,
-    source: `"- Michael Scott, Season 5, "The Duel"`
+    source: `Michael Scott, Season 5, "The Duel"`
   },
   {
     //quote 2 
     quote: `"I find your lack of faith disturbing"`,
-    source: "- Darth Vader, Star Wars A New Hope"
+    source: "Darth Vader, Star Wars A New Hope"
   },
   {
     //quote 3
     quote: `"It's a dangerous business, Frodo, going out your door. You step onto the road, and if you don't keep your feet, there's no knowing where you might be swept off to."`,
-    source:  "- Bilbo, The Lord of the Rings Fellowship of the Ring"
+    source:  "Bilbo, The Lord of the Rings Fellowship of the Ring"
   },
   {
     //quote 4
@@ -56,7 +56,7 @@ const quote = [
   ***/
 
   function printQuote (){
- var result = getRandomQuote();
+ var result = getRandomQuote(quote);
     var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source + "</p>" + "<p class = 'year'>" + result.year + "</p>";
     document.getElementById('quote-box').innerHTML = message;
     }
