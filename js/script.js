@@ -55,11 +55,10 @@ console.log (getRandomQuote(quote))
    * `printQuote` function
   ***/
 
-  /**function printQuote (){
+  function printQuote (){
  var result = getRandomQuote();
     var message = "<p class = 'quote'>" + quote.quote + "</p>" + "<p class ='source'>" + quote.source + "</p>" + "<p class = 'year'>" + quote.year + "</p>";
-    if ( quote.quote === true){
-      print (quote.quote);
+    document.getElementById('quote-box').innerHTML = message;
     }
 
 
@@ -69,4 +68,4 @@ console.log (getRandomQuote(quote))
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-/**document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false);
