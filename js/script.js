@@ -44,12 +44,12 @@ const quote = [
    * `getRandomQuote` function
   ***/
   
-  function getRandomQuote (quote) {
+  function getRandomQuote (array) {
   var quoteIndex = Math.floor(Math.random() * (quote.length));
       var randomQuote = array[quoteIndex]
   return randomQuote;
   }
-console.log (getRandomQuote(quote))
+
   
   /***
    * `printQuote` function
@@ -57,7 +57,7 @@ console.log (getRandomQuote(quote))
 
   function printQuote (){
  var result = getRandomQuote();
-    var message = "<p class = 'quote'>" + quote.quote + "</p>" + "<p class ='source'>" + quote.source + "</p>" + "<p class = 'year'>" + quote.year + "</p>";
+    var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source + "</p>" + "<p class = 'year'>" + result.year + "</p>";
     document.getElementById('quote-box').innerHTML = message;
     }
 
