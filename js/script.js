@@ -57,8 +57,12 @@ const quote = [
 
   function printQuote (){
  var result = getRandomQuote(quote);
-    var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source + "</p>" + "<p class = 'year'>" + result.year + "</p>";
-    document.getElementById('quote-box').innerHTML = message;
+ if (quote.year === ""){   
+  var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source + "</p>"+"<p class = 'year'>" + result.year + "</p>";
+ }else{   
+    var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source + "</p>";
+ }
+  document.getElementById('quote-box').innerHTML = message;
     }
 
 
