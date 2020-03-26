@@ -40,9 +40,9 @@ const quote = [
   ];
   
   function getRandomQuote (array) {
-  var quoteIndex = Math.floor(Math.random() * (quote.length));
+    var quoteIndex = Math.floor(Math.random() * (quote.length));
       var randomQuote = array[quoteIndex]
-  return randomQuote;
+    return randomQuote;
   }
 
   
@@ -51,27 +51,22 @@ const quote = [
   ***/
 
   function printQuote (){
- var result = getRandomQuote(quote);
- if (result.year){   
-  var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source 
-  + "</p>"+"<p class = 'year'>" + result.year + "</p>";
- }else{   
-    var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source + "</p>";
+    var result = getRandomQuote(quote);
+      if (result.year){   
+        var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source 
+  +     "</p>"+"<p class = 'year'>" + result.year + "</p>";
+ }    else{   
+        var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source + "</p>";
  }
 
   document.getElementById('quote-box').innerHTML = message;
     }
 
-//  function changeQuote (){
-//   printQuote.setInterval(1000) 
-//   };
-
 var quoteTimer = setInterval(printQuote, 10000);
-
 
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", quoteTimer, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false);
