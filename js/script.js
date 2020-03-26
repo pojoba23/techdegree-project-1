@@ -67,6 +67,7 @@ const quotes = [
         var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source + "</p>";
  }
 
+
   document.getElementById('quote-box').innerHTML = message;
     }
 
