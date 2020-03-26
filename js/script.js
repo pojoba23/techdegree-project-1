@@ -46,7 +46,7 @@ const quotes = [
   //This Function makes a random number that is assigned to the quote variable.
 
   function getRandomQuote (array) {
-    var quoteIndex = Math.floor(Math.random() * (quote.length));
+    var quoteIndex = Math.floor(Math.random() * (quotes.length));
       var randomQuote = array[quoteIndex]
     return randomQuote;
   }
@@ -59,7 +59,7 @@ const quotes = [
 // and the properties available in each quote
 
   function printQuote (){
-    var result = getRandomQuote(quote);
+    var result = getRandomQuote(quotes);
       if (result.year){   
         var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source 
   +     "</p>"+"<p class = 'year'>" + result.year + "</p>";
