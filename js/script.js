@@ -67,7 +67,7 @@ const quotes = [
       +"</p>"+"<p class = 'year'>" + result.year + "</p>";
  } if (result.citation){   
         var message = "<p class = 'quote'>" + result.quote + "</p>" + "<p class ='source'>" + result.source + "</p>" 
-        + "<p class = 'citation>" + result.citation + "</p>";
+        + "<p class = 'citation'>" + result.citation + "</p>";
  }  
 
 
